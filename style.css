@@ -1,0 +1,443 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #222;
+}
+
+p {
+    margin: 0.5rem 0 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #757575;
+}
+
+
+
+/* Header (Fixed Banner) */
+header {
+    background: linear-gradient(90deg, #007BFF, #0056b3);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: #2b3c4e;
+    border-style: solid;
+    border-top: transparent;
+}
+
+
+
+header nav ul {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #007BFF;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+/* Prevent content overlap with the fixed header */
+main {
+    padding-top: 6rem; /* Adjust padding to match header height */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-top: 6rem; /* Space for the fixed header */
+}
+
+.hero-image {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 2rem;
+    background: #eaf4ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.welcome p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.filter {
+    background: #eaf4ff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.filter h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+}
+
+.filter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1rem;
+}
+
+.filter input,
+.filter select {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.filter input:focus,
+.filter select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.filter button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter button:hover {
+    background-color: #0056b3;
+}
+
+/* Car Listings */
+.car-listings {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-listings h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.car-card {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.car-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.car-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.car-card p strong {
+    color: #222;
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #007BFF;
+    font-size: 2rem;
+    padding: 2.5rem;
+}
+
+.contact ul {
+    list-style:none;
+    padding: 0;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    border: #007BFF;
+    border-radius: 10%;
+    border-color: #0010ee;
+    border-style:outset;
+}
+
+.contact ul li {
+    margin-bottom: 0.5rem;
+    text-shadow: #222;
+    text-decoration: double;
+    
+}
+
+.contact ul li strong {
+    color: #007BFF;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact input, 
+.contact textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.contact input:focus, 
+.contact textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.contact button {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* About Section */
+.about {
+    padding: 2rem;
+    background: #eaf4ff;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+     
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.about-values {
+    margin-top: 1.5rem;
+}
+
+.about-values h3 {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.about-values ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.about-values ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.about-values ul li strong {
+    color: #007BFF;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 600px) {
+    .contact {
+        padding: 2.5rem;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact ul {
+        font-size: 1rem;
+    }
+}
+
+

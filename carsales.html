@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales - Sheskburn Car Sales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <h1>Sheskburn Car Sales</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="carsales.html">Car Sales</a></li>
+                    <li><a href="newsevents.html">News and Events</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter">
+            <h2>Filter Cars</h2>
+            <form id="filterForm">
+                <label for="priceFilter">Max Price ($):</label>
+                <input type="number" id="priceFilter" placeholder="Enter max price">
+
+                <label for="modelFilter">Model:</label>
+                <input type="text" id="modelFilter" placeholder="Enter car model">
+
+                <label for="mileageFilter">Max Mileage (km):</label>
+                <input type="number" id="mileageFilter" placeholder="Enter max mileage">
+
+                <label for="makeFilter">Make:</label>
+                <input type="text" id="makeFilter" placeholder="e.g., Honda">
+
+                <button type="button" id="applyFilters">Apply Filters</button>
+            </form>
+        </section>
+
+        <section class="car-listings">
+            <h2>Available Vehicles</h2>
+            <div id="carGrid" class="car-grid">
+                <!-- Pre-added cars -->
+                <div class="car-card" data-price="25000" data-model="Civic" data-mileage="15000" data-make="Honda">
+                    <img src="Images/civic.jpg" alt="Car 1">
+                    <h3>Honda Civic</h3>
+                    <p>Price: $25,000</p>
+                    <p>Mileage: 15,000 km</p>
+                </div>
+                <div class="car-card" data-price="30000" data-model="Camry" data-mileage="10000" data-make="Toyota">
+                    <img src="Images/camry.jpeg" alt="Car 2">
+                    <h3>Toyota Camry</h3>
+                    <p>Price: $30,000</p>
+                    <p>Mileage: 10,000 km</p>
+                </div>
+                <div class="car-card" data-price="20000" data-model="Corolla" data-mileage="50000" data-make="Toyota">
+                    <img src="Images/corolla.jpg" alt="Car 3">
+                    <h3>Toyota Corolla</h3>
+                    <p>Price: $20,000</p>
+                    <p>Mileage: 50,000 km</p>
+                </div>
+                <div class="car-card" data-price="40000" data-model="Accord" data-mileage="12000" data-make="Honda">
+                    <img src="Images/accord.jpg" alt="Car 4">
+                    <h3>Honda Accord</h3>
+                    <p>Price: $40,000</p>
+                    <p>Mileage: 12,000 km</p>
+                </div>
+                <div class="car-card" data-price="35000" data-model="Mustang" data-mileage="8000" data-make="Ford">
+                    <img src="Images/mustang.jpg" alt="Car 5">
+                    <h3>Ford Mustang</h3>
+                    <p>Price: $35,000</p>
+                    <p>Mileage: 8,000 km</p>
+                </div>
+                <div class="car-card" data-price="28000" data-model="Outback" data-mileage="40000" data-make="Subaru">
+                    <img src="Images/outback.jpg" alt="Car 6">
+                    <h3>Subaru Outback</h3>
+                    <p>Price: $28,000</p>
+                    <p>Mileage: 40,000 km</p>
+                </div>
+                <div class="car-card" data-price="32000" data-model="Explorer" data-mileage="30000" data-make="Ford">
+                    <img src="Images/explorer.png" alt="Car 7">
+                    <h3>Ford Explorer</h3>
+                    <p>Price: $32,000</p>
+                    <p>Mileage: 30,000 km</p>
+                </div>
+                <div class="car-card" data-price="18000" data-model="Yaris" data-mileage="55000" data-make="Toyota">
+                    <img src="Images/yaris.jpg" alt="Car 8">
+                    <h3>Toyota Yaris</h3>
+                    <p>Price: $18,000</p>
+                    <p>Mileage: 55,000 km</p>
+                </div>
+                <div class="car-card" data-price="50000" data-model="Model 3" data-mileage="20000" data-make="Tesla">
+                    <img src="Images/model3.jpg" alt="Car 9">
+                    <h3>Tesla Model 3</h3>
+                    <p>Price: $50,000</p>
+                    <p>Mileage: 20,000 km</p>
+                </div>
+                <div class="car-card" data-price="45000" data-model="Wrangler" data-mileage="10000" data-make="Jeep">
+                    <img src="Images/wrnagler.jpg" alt="Car 10">
+                    <h3>Jeep Wrangler</h3>
+                    <p>Price: $45,000</p>
+                    <p>Mileage: 10,000 km</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sheskburn Car Sales. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
